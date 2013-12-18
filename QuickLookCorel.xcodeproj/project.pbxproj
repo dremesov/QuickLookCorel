@@ -15,6 +15,7 @@
 		0A3249F518619DB400BF657B /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3249F418619DB400BF657B /* GenerateThumbnailForURL.m */; };
 		0A3249F718619DB400BF657B /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3249F618619DB400BF657B /* GeneratePreviewForURL.m */; };
 		0A3249F918619DB400BF657B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A3249F818619DB400BF657B /* main.c */; };
+		B8F459D5E2AF4E52B36882C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA745130A0148269AB9B2F7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		0A3249F618619DB400BF657B /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		0A3249F818619DB400BF657B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0A3249FA18619DB400BF657B /* QuickLookCorel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickLookCorel-Prefix.pch"; sourceTree = "<group>"; };
+		9EA745130A0148269AB9B2F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1241BAE2AA14DFDBAB37B9E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +43,7 @@
 				0A3249E718619DB400BF657B /* QuickLook.framework in Frameworks */,
 				0A3249EB18619DB400BF657B /* CoreServices.framework in Frameworks */,
 				0A3249E918619DB400BF657B /* ApplicationServices.framework in Frameworks */,
+				B8F459D5E2AF4E52B36882C4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +56,7 @@
 				0A3249EE18619DB400BF657B /* QuickLookCorel */,
 				0A3249E518619DB400BF657B /* Frameworks */,
 				0A3249E418619DB400BF657B /* Products */,
+				A1241BAE2AA14DFDBAB37B9E /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +75,7 @@
 				0A3249E818619DB400BF657B /* ApplicationServices.framework */,
 				0A3249EA18619DB400BF657B /* CoreServices.framework */,
 				0A3249EC18619DB400BF657B /* CoreFoundation.framework */,
+				9EA745130A0148269AB9B2F7 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,11 +118,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A3249FD18619DB400BF657B /* Build configuration list for PBXNativeTarget "QuickLookCorel" */;
 			buildPhases = (
+				7C8AE27C2EF44136A147D822 /* Check Pods Manifest.lock */,
 				0A3249DD18619DB400BF657B /* Sources */,
 				0A3249DE18619DB400BF657B /* Frameworks */,
 				0A3249DF18619DB400BF657B /* Headers */,
 				0A3249E018619DB400BF657B /* Resources */,
 				0A3249E118619DB400BF657B /* Rez */,
+				EA0B471544C84F4B8C9916EC /* Copy Pods Resources */,
 				0A324A0018619F2400BF657B /* ShellScript */,
 			);
 			buildRules = (
@@ -188,6 +196,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "rm -r ~/Library/QuickLook/${FULL_PRODUCT_NAME}\ncp -Rp ${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME} ~/Library/QuickLook";
+		};
+		7C8AE27C2EF44136A147D822 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA0B471544C84F4B8C9916EC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -284,6 +322,7 @@
 		};
 		0A3249FE18619DB400BF657B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1241BAE2AA14DFDBAB37B9E /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -297,6 +336,7 @@
 		};
 		0A3249FF18619DB400BF657B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1241BAE2AA14DFDBAB37B9E /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
