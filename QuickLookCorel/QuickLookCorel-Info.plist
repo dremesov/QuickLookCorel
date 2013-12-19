@@ -11,6 +11,7 @@
 			<string>QLGenerator</string>
 			<key>LSItemContentTypes</key>
 			<array>
+				<string>com.apple.disk-image-cdr</string>
 				<string>com.corel.cdr</string>
 			</array>
 		</dict>
@@ -57,13 +58,12 @@
 	<real>800</real>
 	<key>QLSupportsConcurrentRequests</key>
 	<false/>
-	<key>QLThumbnailMinimumSize</key>
-	<real>17</real>
-    <key>UTImportedTypeDeclarations</key>
+	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>
 			<key>UTTypeConformsTo</key>
 			<array>
+				<string>public.archive</string>
 				<string>public.data</string>
 				<string>public.zip-archive</string>
 				<string>public.composite-content</string>
