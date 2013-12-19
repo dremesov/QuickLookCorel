@@ -1,7 +1,9 @@
-#include <CoreFoundation/CoreFoundation.h>
-#include <CoreServices/CoreServices.h>
-#include <QuickLook/QuickLook.h>
+#import <CoreFoundation/CoreFoundation.h>
+#import <CoreServices/CoreServices.h>
+#import <QuickLook/QuickLook.h>
 #import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
+#import "ISLCorelGraphicsFile.h"
 
 OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thumbnail, CFURLRef url, CFStringRef contentTypeUTI, CFDictionaryRef options, CGSize maxSize);
 void CancelThumbnailGeneration(void *thisInterface, QLThumbnailRequestRef thumbnail);
@@ -12,9 +14,28 @@ void CancelThumbnailGeneration(void *thisInterface, QLThumbnailRequestRef thumbn
    This function's job is to create thumbnail for designated file as fast as possible
    ----------------------------------------------------------------------------- */
 
-OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thumbnail, CFURLRef url, CFStringRef contentTypeUTI, CFDictionaryRef options, CGSize maxSize)
+OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thumbnail, CFURLRef cfurl, CFStringRef contentTypeUTI, CFDictionaryRef options, CGSize maxSize)
 {
-    NSLog(@"QuickLookCorel::GenerateThumbnalForURL : URL %@, UTI %@", (__bridge NSURL*)url, (__bridge NSString*)contentTypeUTI);
+    if (QLThumbnailRequestIsCancelled(thumbnail))
+        return noErr;
+    
+    @autoreleasepool {
+        NSURL *url = (__bridge NSURL*)cfurl;
+        ISLCorelGraphicsFile *cgFile = [[ISLCorelGraphicsFile alloc] initWithURL:url];
+        if (cgFile.fileType) {
+            CGImageRef img = [cgFile thumbnailCGImage];
+            if (img) {
+                CGContextRef ctx = QLThumbnailRequestCreateContext(thumbnail, maxSize, YES, nil);
+                if (ctx) {
+                    CGContextDrawImage(ctx, NSMakeRect(0, 0, maxSize.width, maxSize.height), img);
+                    QLThumbnailRequestFlushContext(thumbnail, ctx);
+                    CFRelease(ctx);
+                }
+            }
+        }
+        cgFile = nil;
+    }
+    
     return noErr;
 }
 

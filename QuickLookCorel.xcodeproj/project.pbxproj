@@ -15,6 +15,10 @@
 		0A3249F518619DB400BF657B /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3249F418619DB400BF657B /* GenerateThumbnailForURL.m */; };
 		0A3249F718619DB400BF657B /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3249F618619DB400BF657B /* GeneratePreviewForURL.m */; };
 		0A3249F918619DB400BF657B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A3249F818619DB400BF657B /* main.c */; };
+		0A408F9618620BDC00270515 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A408F9518620BDC00270515 /* AppKit.framework */; };
+		0A408F9818620BE800270515 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A408F9718620BE800270515 /* Foundation.framework */; };
+		0A6615281861B85E001E3B1D /* ISLCorelGraphicsFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6615261861B85E001E3B1D /* ISLCorelGraphicsFile.h */; };
+		0A6615291861B85E001E3B1D /* ISLCorelGraphicsFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6615271861B85E001E3B1D /* ISLCorelGraphicsFile.m */; };
 		B8F459D5E2AF4E52B36882C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA745130A0148269AB9B2F7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,10 @@
 		0A3249F618619DB400BF657B /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		0A3249F818619DB400BF657B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0A3249FA18619DB400BF657B /* QuickLookCorel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickLookCorel-Prefix.pch"; sourceTree = "<group>"; };
+		0A408F9518620BDC00270515 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0A408F9718620BE800270515 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0A6615261861B85E001E3B1D /* ISLCorelGraphicsFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISLCorelGraphicsFile.h; sourceTree = "<group>"; };
+		0A6615271861B85E001E3B1D /* ISLCorelGraphicsFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISLCorelGraphicsFile.m; sourceTree = "<group>"; };
 		9EA745130A0148269AB9B2F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1241BAE2AA14DFDBAB37B9E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A408F9818620BE800270515 /* Foundation.framework in Frameworks */,
+				0A408F9618620BDC00270515 /* AppKit.framework in Frameworks */,
 				0A3249ED18619DB400BF657B /* CoreFoundation.framework in Frameworks */,
 				0A3249E718619DB400BF657B /* QuickLook.framework in Frameworks */,
 				0A3249EB18619DB400BF657B /* CoreServices.framework in Frameworks */,
@@ -71,6 +81,8 @@
 		0A3249E518619DB400BF657B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A408F9718620BE800270515 /* Foundation.framework */,
+				0A408F9518620BDC00270515 /* AppKit.framework */,
 				0A3249E618619DB400BF657B /* QuickLook.framework */,
 				0A3249E818619DB400BF657B /* ApplicationServices.framework */,
 				0A3249EA18619DB400BF657B /* CoreServices.framework */,
@@ -85,6 +97,8 @@
 			children = (
 				0A3249F418619DB400BF657B /* GenerateThumbnailForURL.m */,
 				0A3249F618619DB400BF657B /* GeneratePreviewForURL.m */,
+				0A6615261861B85E001E3B1D /* ISLCorelGraphicsFile.h */,
+				0A6615271861B85E001E3B1D /* ISLCorelGraphicsFile.m */,
 				0A3249F818619DB400BF657B /* main.c */,
 				0A3249EF18619DB400BF657B /* Supporting Files */,
 			);
@@ -108,6 +122,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6615281861B85E001E3B1D /* ISLCorelGraphicsFile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +252,7 @@
 				0A3249F518619DB400BF657B /* GenerateThumbnailForURL.m in Sources */,
 				0A3249F718619DB400BF657B /* GeneratePreviewForURL.m in Sources */,
 				0A3249F918619DB400BF657B /* main.c in Sources */,
+				0A6615291861B85E001E3B1D /* ISLCorelGraphicsFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
