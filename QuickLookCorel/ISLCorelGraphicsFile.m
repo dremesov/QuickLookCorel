@@ -7,8 +7,6 @@
 //
 
 #import "ISLCorelGraphicsFile.h"
-#import "ISLRiffChunk.h"
-
 #import <ZipKit/ZKDataArchive.h>
 #import <ZipKit/ZKCDHeader.h>
 #import <AppKit/AppKit.h>
@@ -30,7 +28,7 @@
             self = nil;
         } else {
             @try {
-                uint32_t magic = NSSwapBigIntToHost(*((uint32_t*)[[fh readDataOfLength:4] bytes]));
+                uint32_t magic = NSSwapLittleIntToHost(*((uint32_t*)[[fh readDataOfLength:4] bytes]));
                 if (magic == kISLCorelGraphicsFileRIFF || magic == kISLCorelGraphicsFileZip) {
                     _fileType = magic;
                 } else {

@@ -135,7 +135,7 @@ typedef struct __tag_CompressedListChunkHeader {
             if (dataLength >= sizeof(_fourCC) + sizeof(chunkDataLength) + chunkDataLength) {
                 NSUInteger offset = sizeof(_fourCC) + sizeof(chunkDataLength);
                 
-                if (_fourCC == kRIFFMagic || _fourCC == kLISTMagic) {
+                if (_fourCC == kISLRiffChunkMagicRIFF || _fourCC == kISLRiffChunkMagicLIST) {
                     [data getBytes:&_identifier range:NSMakeRange(offset, sizeof(_identifier))];
                     _identifier = NSSwapLittleIntToHost(_identifier);
                     _hasIdentifier = YES;
@@ -156,7 +156,7 @@ typedef struct __tag_CompressedListChunkHeader {
                                                  length:chunkDataLength
                                            freeWhenDone:NO];
                 
-                if (_fourCC == kLISTMagic && _identifier == FOURCC('c', 'm', 'p', 'r')) {
+                if (_fourCC == kISLRiffChunkMagicLIST && _identifier == FOURCC('c', 'm', 'p', 'r')) {
                     ISLRiffCompressedListChunkHeader *cmprHeader = (ISLRiffCompressedListChunkHeader*)[_data bytes];
                     cmprHeader->compressedSize = NSSwapLittleIntToHost(cmprHeader->compressedSize);
                     cmprHeader->uncompressedSize = NSSwapLittleIntToHost(cmprHeader->uncompressedSize);
@@ -188,7 +188,7 @@ typedef struct __tag_CompressedListChunkHeader {
                             }
                         }
                     }
-                } else if (_fourCC == kLISTMagic && _identifier == FOURCC('s', 't', 'l', 't')) {
+                } else if (_fourCC == kISLRiffChunkMagicLIST && _identifier == FOURCC('s', 't', 'l', 't')) {
                     NSLog(@"Found stlt");
                 } else if (_subChunks) {
                     for (offset = 0; offset < chunkDataLength;) {

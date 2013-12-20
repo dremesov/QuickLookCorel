@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ISLRiffChunk.h"
 
 typedef enum _tag_ISLCorelGraphicsFileType {
-    kISLCorelGraphicsFileRIFF = 0x52494646, // 'RIFF'
-    kISLCorelGraphicsFileZip = 0x504b0304   // 'PK\x03\x04'
+    kISLCorelGraphicsFileRIFF = kISLRiffChunkMagicRIFF,
+    kISLCorelGraphicsFileZip = FOURCC('P','K',3,4)
 } ISLCorelGraphicsFileType;
 
 @interface ISLCorelGraphicsFile : NSObject

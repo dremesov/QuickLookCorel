@@ -15,8 +15,8 @@
 #endif
 
 typedef enum __tag_RiffChunkMagic {
-    kRIFFMagic = FOURCC('R', 'I', 'F', 'F'),
-    kLISTMagic = FOURCC('L', 'I', 'S', 'T')
+    kISLRiffChunkMagicRIFF = FOURCC('R', 'I', 'F', 'F'),
+    kISLRiffChunkMagicLIST = FOURCC('L', 'I', 'S', 'T')
 } ISLRiffChunkMagic;
 
 @interface ISLRiffChunk : NSObject
