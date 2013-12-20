@@ -44,7 +44,7 @@
       </PathRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-p /Users/dmitry/projects/QuickLookCorel/test1.cdr"
+            argument = "-p /Users/dmitry/projects/QuickLookCorel/test3.cdr"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
