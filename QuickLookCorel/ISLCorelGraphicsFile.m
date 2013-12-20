@@ -7,6 +7,8 @@
 //
 
 #import "ISLCorelGraphicsFile.h"
+#import "ISLRiffChunk.h"
+
 #import <ZipKit/ZKDataArchive.h>
 #import <ZipKit/ZKCDHeader.h>
 #import <AppKit/AppKit.h>
@@ -61,8 +63,10 @@
     switch (_fileType) {
         case kISLCorelGraphicsFileZip:
             return [self thumbnailImageFromZip];
-            break;
             
+        case kISLCorelGraphicsFileRIFF:
+            return [self previewImageFromRIFF];
+
         default:
             break;
     }
@@ -86,7 +90,9 @@
 
 - (CGImageRef)previewImageFromRIFF
 {
+    ISLRiffChunk *chunk = [[ISLRiffChunk alloc] initWithData:[NSData dataWithContentsOfURL:self.fileURL]];
     
+    NSLog(@"Loaded RIFF %@", chunk);
     return nil;
 }
 @end

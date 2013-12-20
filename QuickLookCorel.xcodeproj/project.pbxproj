@@ -17,6 +17,8 @@
 		0A3249F918619DB400BF657B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A3249F818619DB400BF657B /* main.c */; };
 		0A408F9618620BDC00270515 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A408F9518620BDC00270515 /* AppKit.framework */; };
 		0A408F9818620BE800270515 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A408F9718620BE800270515 /* Foundation.framework */; };
+		0A5B1BC91862FADB0011C270 /* ISLRiffChunk.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5B1BC71862FADB0011C270 /* ISLRiffChunk.h */; };
+		0A5B1BCA1862FADB0011C270 /* ISLRiffChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B1BC81862FADB0011C270 /* ISLRiffChunk.m */; };
 		0A6615281861B85E001E3B1D /* ISLCorelGraphicsFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6615261861B85E001E3B1D /* ISLCorelGraphicsFile.h */; };
 		0A6615291861B85E001E3B1D /* ISLCorelGraphicsFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6615271861B85E001E3B1D /* ISLCorelGraphicsFile.m */; };
 		B8F459D5E2AF4E52B36882C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA745130A0148269AB9B2F7 /* libPods.a */; };
@@ -36,6 +38,8 @@
 		0A3249FA18619DB400BF657B /* QuickLookCorel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickLookCorel-Prefix.pch"; sourceTree = "<group>"; };
 		0A408F9518620BDC00270515 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0A408F9718620BE800270515 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0A5B1BC71862FADB0011C270 /* ISLRiffChunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISLRiffChunk.h; sourceTree = "<group>"; };
+		0A5B1BC81862FADB0011C270 /* ISLRiffChunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISLRiffChunk.m; sourceTree = "<group>"; };
 		0A6615261861B85E001E3B1D /* ISLCorelGraphicsFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISLCorelGraphicsFile.h; sourceTree = "<group>"; };
 		0A6615271861B85E001E3B1D /* ISLCorelGraphicsFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISLCorelGraphicsFile.m; sourceTree = "<group>"; };
 		9EA745130A0148269AB9B2F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +99,8 @@
 		0A3249EE18619DB400BF657B /* QuickLookCorel */ = {
 			isa = PBXGroup;
 			children = (
+				0A5B1BC71862FADB0011C270 /* ISLRiffChunk.h */,
+				0A5B1BC81862FADB0011C270 /* ISLRiffChunk.m */,
 				0A3249F418619DB400BF657B /* GenerateThumbnailForURL.m */,
 				0A3249F618619DB400BF657B /* GeneratePreviewForURL.m */,
 				0A6615261861B85E001E3B1D /* ISLCorelGraphicsFile.h */,
@@ -122,6 +128,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5B1BC91862FADB0011C270 /* ISLRiffChunk.h in Headers */,
 				0A6615281861B85E001E3B1D /* ISLCorelGraphicsFile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5B1BCA1862FADB0011C270 /* ISLRiffChunk.m in Sources */,
 				0A3249F518619DB400BF657B /* GenerateThumbnailForURL.m in Sources */,
 				0A3249F718619DB400BF657B /* GeneratePreviewForURL.m in Sources */,
 				0A3249F918619DB400BF657B /* main.c in Sources */,
