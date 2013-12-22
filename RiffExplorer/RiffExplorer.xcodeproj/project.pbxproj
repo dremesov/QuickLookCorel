@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A2DDDD31865FBE800E69861 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2DDDD21865FBE800E69861 /* Cocoa.framework */; };
+		0A2DDDDD1865FBE800E69861 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DDDDB1865FBE800E69861 /* InfoPlist.strings */; };
+		0A2DDDDF1865FBE800E69861 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DDDDE1865FBE800E69861 /* main.m */; };
+		0A2DDDE31865FBE800E69861 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DDDE11865FBE800E69861 /* Credits.rtf */; };
+		0A2DDDE61865FBE800E69861 /* ISLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DDDE51865FBE800E69861 /* ISLAppDelegate.m */; };
+		0A2DDDE91865FBE800E69861 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DDDE71865FBE800E69861 /* MainMenu.xib */; };
+		0A2DDDEB1865FBE800E69861 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DDDEA1865FBE800E69861 /* Images.xcassets */; };
+		0A2DDDF21865FBE800E69861 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2DDDF11865FBE800E69861 /* XCTest.framework */; };
+		0A2DDDF31865FBE800E69861 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2DDDD21865FBE800E69861 /* Cocoa.framework */; };
+		0A2DDDFB1865FBE800E69861 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DDDF91865FBE800E69861 /* InfoPlist.strings */; };
+		0A2DDDFD1865FBE800E69861 /* RiffExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DDDFC1865FBE800E69861 /* RiffExplorerTests.m */; };
+		0A2DDE081866017B00E69861 /* ISLRiffChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DDE071866017B00E69861 /* ISLRiffChunk.m */; };
+		0A2DDE0A1866043B00E69861 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2DDE091866043B00E69861 /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A2DDDF41865FBE800E69861 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A2DDDC71865FBE800E69861 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A2DDDCE1865FBE800E69861;
+			remoteInfo = RiffExplorer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A2DDDCF1865FBE800E69861 /* RiffExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiffExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A2DDDD21865FBE800E69861 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0A2DDDD51865FBE800E69861 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0A2DDDD61865FBE800E69861 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0A2DDDD71865FBE800E69861 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0A2DDDDA1865FBE800E69861 /* RiffExplorer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RiffExplorer-Info.plist"; sourceTree = "<group>"; };
+		0A2DDDDC1865FBE800E69861 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A2DDDDE1865FBE800E69861 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A2DDDE01865FBE800E69861 /* RiffExplorer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RiffExplorer-Prefix.pch"; sourceTree = "<group>"; };
+		0A2DDDE21865FBE800E69861 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		0A2DDDE41865FBE800E69861 /* ISLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISLAppDelegate.h; sourceTree = "<group>"; };
+		0A2DDDE51865FBE800E69861 /* ISLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISLAppDelegate.m; sourceTree = "<group>"; };
+		0A2DDDE81865FBE800E69861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0A2DDDEA1865FBE800E69861 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0A2DDDF01865FBE800E69861 /* RiffExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiffExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A2DDDF11865FBE800E69861 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0A2DDDF81865FBE800E69861 /* RiffExplorerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RiffExplorerTests-Info.plist"; sourceTree = "<group>"; };
+		0A2DDDFA1865FBE800E69861 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A2DDDFC1865FBE800E69861 /* RiffExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiffExplorerTests.m; sourceTree = "<group>"; };
+		0A2DDE061866017B00E69861 /* ISLRiffChunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISLRiffChunk.h; sourceTree = "<group>"; };
+		0A2DDE071866017B00E69861 /* ISLRiffChunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISLRiffChunk.m; sourceTree = "<group>"; };
+		0A2DDE091866043B00E69861 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A2DDDCC1865FBE800E69861 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2DDE0A1866043B00E69861 /* libz.dylib in Frameworks */,
+				0A2DDDD31865FBE800E69861 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A2DDDED1865FBE800E69861 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2DDDF31865FBE800E69861 /* Cocoa.framework in Frameworks */,
+				0A2DDDF21865FBE800E69861 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A2DDDC61865FBE800E69861 = {
+			isa = PBXGroup;
+			children = (
+				0A2DDDD81865FBE800E69861 /* RiffExplorer */,
+				0A2DDDF61865FBE800E69861 /* RiffExplorerTests */,
+				0A2DDDD11865FBE800E69861 /* Frameworks */,
+				0A2DDDD01865FBE800E69861 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A2DDDD01865FBE800E69861 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A2DDDCF1865FBE800E69861 /* RiffExplorer.app */,
+				0A2DDDF01865FBE800E69861 /* RiffExplorerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A2DDDD11865FBE800E69861 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A2DDE091866043B00E69861 /* libz.dylib */,
+				0A2DDDD21865FBE800E69861 /* Cocoa.framework */,
+				0A2DDDF11865FBE800E69861 /* XCTest.framework */,
+				0A2DDDD41865FBE800E69861 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A2DDDD41865FBE800E69861 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A2DDDD51865FBE800E69861 /* AppKit.framework */,
+				0A2DDDD61865FBE800E69861 /* CoreData.framework */,
+				0A2DDDD71865FBE800E69861 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0A2DDDD81865FBE800E69861 /* RiffExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				0A2DDE061866017B00E69861 /* ISLRiffChunk.h */,
+				0A2DDE071866017B00E69861 /* ISLRiffChunk.m */,
+				0A2DDDE41865FBE800E69861 /* ISLAppDelegate.h */,
+				0A2DDDE51865FBE800E69861 /* ISLAppDelegate.m */,
+				0A2DDDE71865FBE800E69861 /* MainMenu.xib */,
+				0A2DDDEA1865FBE800E69861 /* Images.xcassets */,
+				0A2DDDD91865FBE800E69861 /* Supporting Files */,
+			);
+			path = RiffExplorer;
+			sourceTree = "<group>";
+		};
+		0A2DDDD91865FBE800E69861 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A2DDDDA1865FBE800E69861 /* RiffExplorer-Info.plist */,
+				0A2DDDDB1865FBE800E69861 /* InfoPlist.strings */,
+				0A2DDDDE1865FBE800E69861 /* main.m */,
+				0A2DDDE01865FBE800E69861 /* RiffExplorer-Prefix.pch */,
+				0A2DDDE11865FBE800E69861 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A2DDDF61865FBE800E69861 /* RiffExplorerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A2DDDFC1865FBE800E69861 /* RiffExplorerTests.m */,
+				0A2DDDF71865FBE800E69861 /* Supporting Files */,
+			);
+			path = RiffExplorerTests;
+			sourceTree = "<group>";
+		};
+		0A2DDDF71865FBE800E69861 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A2DDDF81865FBE800E69861 /* RiffExplorerTests-Info.plist */,
+				0A2DDDF91865FBE800E69861 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A2DDDCE1865FBE800E69861 /* RiffExplorer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A2DDE001865FBE800E69861 /* Build configuration list for PBXNativeTarget "RiffExplorer" */;
+			buildPhases = (
+				0A2DDDCB1865FBE800E69861 /* Sources */,
+				0A2DDDCC1865FBE800E69861 /* Frameworks */,
+				0A2DDDCD1865FBE800E69861 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RiffExplorer;
+			productName = RiffExplorer;
+			productReference = 0A2DDDCF1865FBE800E69861 /* RiffExplorer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A2DDDEF1865FBE800E69861 /* RiffExplorerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A2DDE031865FBE800E69861 /* Build configuration list for PBXNativeTarget "RiffExplorerTests" */;
+			buildPhases = (
+				0A2DDDEC1865FBE800E69861 /* Sources */,
+				0A2DDDED1865FBE800E69861 /* Frameworks */,
+				0A2DDDEE1865FBE800E69861 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A2DDDF51865FBE800E69861 /* PBXTargetDependency */,
+			);
+			name = RiffExplorerTests;
+			productName = RiffExplorerTests;
+			productReference = 0A2DDDF01865FBE800E69861 /* RiffExplorerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A2DDDC71865FBE800E69861 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ISL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = iSoftLab;
+				TargetAttributes = {
+					0A2DDDEF1865FBE800E69861 = {
+						TestTargetID = 0A2DDDCE1865FBE800E69861;
+					};
+				};
+			};
+			buildConfigurationList = 0A2DDDCA1865FBE800E69861 /* Build configuration list for PBXProject "RiffExplorer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A2DDDC61865FBE800E69861;
+			productRefGroup = 0A2DDDD01865FBE800E69861 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A2DDDCE1865FBE800E69861 /* RiffExplorer */,
+				0A2DDDEF1865FBE800E69861 /* RiffExplorerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A2DDDCD1865FBE800E69861 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2DDDDD1865FBE800E69861 /* InfoPlist.strings in Resources */,
+				0A2DDDEB1865FBE800E69861 /* Images.xcassets in Resources */,
+				0A2DDDE31865FBE800E69861 /* Credits.rtf in Resources */,
+				0A2DDDE91865FBE800E69861 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A2DDDEE1865FBE800E69861 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2DDDFB1865FBE800E69861 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A2DDDCB1865FBE800E69861 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2DDDDF1865FBE800E69861 /* main.m in Sources */,
+				0A2DDE081866017B00E69861 /* ISLRiffChunk.m in Sources */,
+				0A2DDDE61865FBE800E69861 /* ISLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A2DDDEC1865FBE800E69861 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2DDDFD1865FBE800E69861 /* RiffExplorerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A2DDDF51865FBE800E69861 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A2DDDCE1865FBE800E69861 /* RiffExplorer */;
+			targetProxy = 0A2DDDF41865FBE800E69861 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A2DDDDB1865FBE800E69861 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A2DDDDC1865FBE800E69861 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0A2DDDE11865FBE800E69861 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A2DDDE21865FBE800E69861 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		0A2DDDE71865FBE800E69861 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A2DDDE81865FBE800E69861 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		0A2DDDF91865FBE800E69861 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A2DDDFA1865FBE800E69861 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A2DDDFE1865FBE800E69861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0A2DDDFF1865FBE800E69861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0A2DDE011865FBE800E69861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RiffExplorer/RiffExplorer-Prefix.pch";
+				INFOPLIST_FILE = "RiffExplorer/RiffExplorer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0A2DDE021865FBE800E69861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RiffExplorer/RiffExplorer-Prefix.pch";
+				INFOPLIST_FILE = "RiffExplorer/RiffExplorer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0A2DDE041865FBE800E69861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RiffExplorer.app/Contents/MacOS/RiffExplorer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RiffExplorer/RiffExplorer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RiffExplorerTests/RiffExplorerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0A2DDE051865FBE800E69861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RiffExplorer.app/Contents/MacOS/RiffExplorer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RiffExplorer/RiffExplorer-Prefix.pch";
+				INFOPLIST_FILE = "RiffExplorerTests/RiffExplorerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A2DDDCA1865FBE800E69861 /* Build configuration list for PBXProject "RiffExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A2DDDFE1865FBE800E69861 /* Debug */,
+				0A2DDDFF1865FBE800E69861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A2DDE001865FBE800E69861 /* Build configuration list for PBXNativeTarget "RiffExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A2DDE011865FBE800E69861 /* Debug */,
+				0A2DDE021865FBE800E69861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0A2DDE031865FBE800E69861 /* Build configuration list for PBXNativeTarget "RiffExplorerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A2DDE041865FBE800E69861 /* Debug */,
+				0A2DDE051865FBE800E69861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A2DDDC71865FBE800E69861 /* Project object */;
+}
