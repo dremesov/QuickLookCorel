@@ -24,12 +24,15 @@ typedef enum __tag_RiffChunkMagic {
 @property (readonly,assign) FourCharCode fourCC;
 @property (readonly,assign) FourCharCode identifier;
 @property (readonly,strong) NSData* data;
-@property (readonly,strong) NSData* inflatedData;
 @property (readonly,strong) NSArray* subChunks;
-@property (readonly,assign) BOOL hasSubChunks;
 @property (readonly,assign) BOOL hasIdentifier;
-@property (readonly,assign) BOOL isCompressed;
 
 - (id)initWithData:(NSData*)data;
+
+@end
+
+@interface NSString (FourCCConverter)
+
++ (NSString*)stringWithFourCC:(FourCharCode)fourCC;
 
 @end

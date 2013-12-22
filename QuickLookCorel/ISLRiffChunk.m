@@ -87,18 +87,26 @@
 
 @end
 
+@implementation NSString (FourCCConverter)
+
++ (NSString*)stringWithFourCC:(FourCharCode)fcc
+{
+#if __LITTLE_ENDIAN__
+    return [NSString stringWithFormat:@"%c%c%c%c", ((char*)(&fcc))[0], ((char*)(&fcc))[1], ((char*)(&fcc))[2], ((char*)(&fcc))[3]];
+#else
+    return [NSString stringWithFormat:@"%c%c%c%c", ((char*)(&fcc))[3], ((char*)(&fcc))[2], ((char*)(&fcc))[1], ((char*)(&fcc))[0]];
+#endif
+}
+
+@end
+
 @implementation ISLRiffChunk
 
 @synthesize subChunks = _subChunks;
 
-- (BOOL)hasSubChunks
-{
-    return (_subChunks && [_subChunks count] ? YES : NO);
-}
-
 - (NSArray*)subChunks
 {
-    return [_subChunks copy];
+    return _subChunks ? [_subChunks copy] : @[];
 }
 
 - (BOOL)isCompressed
@@ -144,14 +152,6 @@ typedef struct __tag_CompressedListChunkHeader {
                     _subChunks = [[NSMutableArray alloc] init];
                 }
                 
-//                NSLog(@"Chunk '%c%c%c%c' of length %d%@",
-//                      ((char*)(&_fourCC))[0], ((char*)(&_fourCC))[1], ((char*)(&_fourCC))[2], ((char*)(&_fourCC))[3],
-//                      chunkDataLength,
-//                      (_hasIdentifier ?
-//                       [NSString stringWithFormat:@" (type='%c%c%c%c')",
-//                        ((char*)(&_identifier))[0], ((char*)(&_identifier))[1], ((char*)(&_identifier))[2], ((char*)(&_identifier))[3]]
-//                       : @""));
-//                
                 self.data = [NSData dataWithBytesNoCopy:(void*)([data bytes] + offset)
                                                  length:chunkDataLength
                                            freeWhenDone:NO];
@@ -226,15 +226,6 @@ typedef struct __tag_CompressedListChunkHeader {
 - (id)initWithData:(NSData*)data
 {
     return [self initWithData:data andBlockSizes:nil];
-}
-
-- (void)dealloc
-{
-    _subChunks = nil;
-    self.inflatedData = nil;
-    self.data = nil;
-    self.fullData = nil;
-    self.blockSizes = nil;
 }
 
 @end
