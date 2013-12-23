@@ -23,7 +23,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
         NSURL *url = (__bridge NSURL*)cfurl;
         ISLCorelGraphicsFile *cgFile = [[ISLCorelGraphicsFile alloc] initWithURL:url];
         if (cgFile.fileType) {
-            CGImageRef img = [cgFile thumbnailCGImage];
+            CGImageRef img = [cgFile previewCGImage];
             if (img) {
                 CGSize imgSize = NSMakeSize(CGImageGetWidth(img), CGImageGetHeight(img));
                 CGContextRef ctx = QLPreviewRequestCreateContext(preview, imgSize, YES, nil);

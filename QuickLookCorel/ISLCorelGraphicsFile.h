@@ -20,5 +20,6 @@ typedef enum _tag_ISLCorelGraphicsFileType {
 
 - (id)initWithURL:(NSURL*)url;
 - (CGImageRef)thumbnailCGImage;
+- (CGImageRef)previewCGImage;
 
 @end
