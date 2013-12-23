@@ -18,8 +18,8 @@
 		0A2DDDF31865FBE800E69861 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2DDDD21865FBE800E69861 /* Cocoa.framework */; };
 		0A2DDDFB1865FBE800E69861 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A2DDDF91865FBE800E69861 /* InfoPlist.strings */; };
 		0A2DDDFD1865FBE800E69861 /* RiffExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DDDFC1865FBE800E69861 /* RiffExplorerTests.m */; };
-		0A2DDE081866017B00E69861 /* ISLRiffChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DDE071866017B00E69861 /* ISLRiffChunk.m */; };
 		0A2DDE0A1866043B00E69861 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2DDE091866043B00E69861 /* libz.dylib */; };
+		0A7A7546186895A10010D939 /* ISLRiffChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7A753F186893380010D939 /* ISLRiffChunk.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +52,9 @@
 		0A2DDDF81865FBE800E69861 /* RiffExplorerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RiffExplorerTests-Info.plist"; sourceTree = "<group>"; };
 		0A2DDDFA1865FBE800E69861 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A2DDDFC1865FBE800E69861 /* RiffExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiffExplorerTests.m; sourceTree = "<group>"; };
-		0A2DDE061866017B00E69861 /* ISLRiffChunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISLRiffChunk.h; sourceTree = "<group>"; };
-		0A2DDE071866017B00E69861 /* ISLRiffChunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISLRiffChunk.m; sourceTree = "<group>"; };
 		0A2DDE091866043B00E69861 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0A7A753E186893380010D939 /* ISLRiffChunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = ISLRiffChunk.h; path = ../../QuickLookCorel/ISLRiffChunk.h; sourceTree = "<group>"; };
+		0A7A753F186893380010D939 /* ISLRiffChunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISLRiffChunk.m; path = ../../QuickLookCorel/ISLRiffChunk.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +122,8 @@
 		0A2DDDD81865FBE800E69861 /* RiffExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				0A2DDE061866017B00E69861 /* ISLRiffChunk.h */,
-				0A2DDE071866017B00E69861 /* ISLRiffChunk.m */,
+				0A7A753E186893380010D939 /* ISLRiffChunk.h */,
+				0A7A753F186893380010D939 /* ISLRiffChunk.m */,
 				0A2DDDE41865FBE800E69861 /* ISLAppDelegate.h */,
 				0A2DDDE51865FBE800E69861 /* ISLAppDelegate.m */,
 				0A2DDDE71865FBE800E69861 /* MainMenu.xib */,
@@ -263,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A2DDDDF1865FBE800E69861 /* main.m in Sources */,
-				0A2DDE081866017B00E69861 /* ISLRiffChunk.m in Sources */,
+				0A7A7546186895A10010D939 /* ISLRiffChunk.m in Sources */,
 				0A2DDDE61865FBE800E69861 /* ISLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +475,7 @@
 				0A2DDE021865FBE800E69861 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A2DDE031865FBE800E69861 /* Build configuration list for PBXNativeTarget "RiffExplorerTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +484,7 @@
 				0A2DDE051865FBE800E69861 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
