@@ -120,7 +120,10 @@
             for (NSUInteger offs = rowIndex*16; offs < (rowIndex+1)*16 && offs < len; ++offs) {
                 if (result.length && !(offs%4))
                     [result appendString:@" "];
-                [result appendFormat:@"%c",isprint(dataPtr[offs]) ? dataPtr[offs] : ' '];
+                if (isprint(dataPtr[offs]))
+                    [result appendFormat:@"%c", dataPtr[offs]];
+                else
+                    [result appendString:@"·"];
             }
             return [result copy];
         }
