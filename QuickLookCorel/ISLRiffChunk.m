@@ -189,7 +189,7 @@ typedef struct __tag_CompressedListChunkHeader {
                         }
                     }
                 } else if (_fourCC == kISLRiffChunkMagicLIST && _identifier == FOURCC('s', 't', 'l', 't')) {
-                    NSLog(@"Found stlt");
+//                    NSLog(@"Found stlt");
                 } else if (_subChunks) {
                     for (offset = 0; offset < chunkDataLength;) {
                         ISLRiffChunk *newChunk = [[ISLRiffChunk alloc] initWithData:[NSData dataWithBytesNoCopy:(void*)([_data bytes] + offset)
@@ -203,18 +203,18 @@ typedef struct __tag_CompressedListChunkHeader {
                     }
                 }
             } else {
-                self.fullData = nil;
+                self = nil;
                 @throw [NSException exceptionWithName:NSRangeException
                                                reason:[NSString stringWithFormat:@"Data object %@ ... (size = %lu) is incorrect",
-                                                       [NSData dataWithBytesNoCopy:(void*)[data bytes] length:32 freeWhenDone:NO],
+                                                       [NSData dataWithBytes:(void*)[data bytes] length:32],
                                                        (unsigned long)[data length]]
                                              userInfo:nil];
             }
         } else {
-            self.fullData = nil;
+            self = nil;
             @throw [NSException exceptionWithName:NSRangeException
                                            reason:[NSString stringWithFormat:@"Data object %@ ... (size = %lu) is smaller than expected",
-                                                   [NSData dataWithBytesNoCopy:(void*)[data bytes] length:32 freeWhenDone:NO],
+                                                   [NSData dataWithBytes:(void*)[data bytes] length:32],
                                                    (unsigned long)[data length]]
                                          userInfo:nil];
         }
