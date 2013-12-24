@@ -1,6 +1,7 @@
 .DS_Store
 Podfile.lock
+Pods/
+3rd-party/
 xcuserdata
-3rd-party
 InstallerPkg.pmdoc
 *.xccheckout
