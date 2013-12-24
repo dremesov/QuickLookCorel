@@ -18,3 +18,17 @@ Screenshot of icons
 Screenshot of preview (automatically uses thumbnail for now)
 
 ![Preview screenshot](http://charlieroot.github.io/images/shot2.png)
+
+#### Manual installation
+
+* Prerequisites
+
+  [Xcode](http://developer.apple.com), [CocoaPods](https://github.com/CocoaPods/CocoaPods)
+  
+* Build
+
+  ```
+  $ pod install
+  $ xcodebuild -workspace QuickLookCorel.xcworkspace -scheme QuickLookCorel -configuration Release
+  ```
+  QuickLookCorel.qlgenerator then get installed in ~/Library/QuickLook
