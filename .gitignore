@@ -5,3 +5,5 @@ Pods/
 xcuserdata
 InstallerPkg.pmdoc
 *.xccheckout
+*.cdr
+
